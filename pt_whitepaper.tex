@@ -117,40 +117,21 @@
 
 
 \begin{abstract}
-Loopring é um protocolo aberto para construir exchanges descentralizadas. Este opera como um conjunto de contratos inteligentes responsáveis
-pela troca e liquidação, que fazem uso de um grupo de agentes off-chain para agregar e comunicar ordens. O protocolo é gratuito, extensível
-e serve como bloco de !!!consconstrução padronizado para aplicativos descentralizados (dApps) que incorporam a funcionalidade de troca!!!.
-As suas normas interoperáveis facilitam a troca anónima e 100\% confiável. Uma das importantes melhorias em relação aos atuais protocolos de
-troca de descentralizados é a sua habilidade das ordens serem combinadas com outras não semelhantes, eliminando restrições de pares de
-negociação e, assim, a liquidez aumenta drasticamente. A Loopring também emprega uma solução única e robusta para prevenir o
-"front-running": uma tentativa injusta de realizar transações antecipadamente às transações principais. Loopring é independente da
-blockchain. Isto é, pode ser implementado em qualquer blockchain que possua a funcionalidade de desenvolver contratos inteligentes. No
-momento em que este documento foi escrito, o protocolo é operável na Ethereum \cite{buterin2017ethereum} \cite{wood2014ethereum} e na Qtum
+Loopring é um protocolo aberto para construir exchanges descentralizadas. Este opera como um conjunto de contratos inteligentes responsáveis pela troca e liquidação, que fazem uso de um grupo de agentes off-chain para agregar e comunicar ordens. O protocolo é gratuito, extensível e serve como bloco de !!!consconstrução padronizado para aplicativos descentralizados (dApps) que incorporam a funcionalidade de troca!!!. As suas normas interoperáveis facilitam a troca anónima e 100\% confiável. Uma das importantes melhorias em relação aos atuais protocolos de
+troca de descentralizados é a sua habilidade das ordens serem combinadas com outras não semelhantes, eliminando restrições de pares de negociação e, assim, a liquidez aumenta drasticamente. A Loopring também emprega uma solução única e robusta para prevenir o "front-running": uma tentativa injusta de realizar transações antecipadamente às transações principais. Loopring é independente da blockchain. Isto é, pode ser implementado em qualquer blockchain que possua a funcionalidade de desenvolver contratos inteligentes. No momento em que este documento foi escrito, o protocolo é operável na Ethereum \cite{buterin2017ethereum} \cite{wood2014ethereum} e na Qtum
 \cite{dai2017smart}, com a implementação na NEO \cite{atterlonn2018distributed} em desenvolvimento.
 \end{abstract}
-
 
 \begin{multicols}{2}
 \section{Introdução\label{sec:introduction}}
 
-Com a proliferação de ativos baseados em blockchain, a necessidade de os trocar entre diferentes entidades aumentou significativamente. À
-medida que milhares de tokens são introduzidos no mercado - incluindo a tokenização de ativos tradicionais - essa necessidade é ampliada. A
-capacidade de trocar um crypoasset por outro é fundamental para o ecossistema, seja a sua troca puramente especulativa, ou necessária para
-aceder às diversas redes através de tokens utilitários. Existe, de facto, uma potencial energia nos ativos \cite{desotocapital}, e
-realização dessa energia - libertar capital - requer, não só a asserção de propriedade sobre os ativos, o que as blockchain permitem, mas
-também a capacidade de transferir e transformar livremente os mesmos.
+Com a proliferação de ativos baseados em blockchain, a necessidade de os trocar entre diferentes entidades aumentou significativamente. À medida que milhares de tokens são introduzidos no mercado - incluindo a tokenização de ativos tradicionais - essa necessidade é ampliada. A
+capacidade de trocar um crypoasset por outro é fundamental para o ecossistema, seja a sua troca puramente especulativa, ou necessária para aceder às diversas redes através de tokens utilitários. Existe, de facto, uma potencial energia nos ativos \cite{desotocapital}, e realização dessa energia - libertar capital - requer, não só a asserção de propriedade sobre os ativos, o que as blockchain permitem, mas também a capacidade de transferir e transformar livremente os mesmos.
  
-Como tal, a troca de tokens com total confiança é um caso atraente a favor da tecnologia blockchain. No entanto, até agora, a maior parte
-dos entusiastas em "cryptos"  contentaram-se em os trocar em "exchanges" tradicionais e centralizadas. O protocolo Loopring é necessário
-porque, tal como a Bitcoin \cite{nakamoto2008bitcoin} sublinhou enfaticamente em relação às trocas de dinheiro eletrónico "peer-to-peer",
-\enquote{os principais benefícios são perdidos se for necessário um terceiro confiável para evitar gastos duplicados}. Da mesma forma, os
-principais benefícios dos ativos descentralizados são perdidos se for preciso utilizar "exchanges" centralizadas.
+Como tal, a troca de tokens com total confiança é um caso atraente a favor da tecnologia blockchain. No entanto, até agora, a maior parte dos entusiastas em "cryptos" contentaram-se em os trocar em "exchanges" tradicionais e centralizadas. O protocolo Loopring é necessário porque, tal como a Bitcoin \cite{nakamoto2008bitcoin} sublinhou enfaticamente em relação às trocas de dinheiro eletrónico "peer-to-peer",
+\enquote{os principais benefícios são perdidos se for necessário um terceiro confiável para evitar gastos duplicados}. Da mesma forma, os principais benefícios dos ativos descentralizados são perdidos se for preciso utilizar "exchanges" centralizadas.
 
-Negociar tokens descentralizados em exchanges centralizadas não sentido do ponto de vista filosófico, pois falha em defender os valores que
-estes projetos descentralizados propõem. Também existem inúmeros riscos práticos e limitações no uso de exchanges centralizadas. Estes
-riscos são descritos abaixo. As exchanges descentralizadas (DEXs) \cite{schuh2015bitshares} \cite{bancor} \cite{kyber} procuraram abordar
-essas questões e, em muitos casos, foram bem sucedidos em minimizar os riscos de segurança ao usar blockchains para desintermediação. Porém,
-à medida que as DEX tornam-se cruciais infraestruturas para a nova economia, ainda há bastante espaço para a melhoria do seu desempenho. O
+Negociar tokens descentralizados em exchanges centralizadas não sentido do ponto de vista filosófico, pois falha em defender os valores que estes projetos descentralizados propõem. Também existem inúmeros riscos práticos e limitações no uso de exchanges centralizadas. Estes riscos são descritos abaixo. As exchanges descentralizadas (DEXs) \cite{schuh2015bitshares} \cite{bancor} \cite{kyber} procuraram abordar essas questões e, em muitos casos, foram bem sucedidos em minimizar os riscos de segurança ao usar blockchains para desintermediação. Porém, à medida que as DEX tornam-se cruciais infraestruturas para a nova economia, ainda há bastante espaço para a melhoria do seu desempenho. O
 Loopring visa fornecer as ferramentas modulares para essa infraestrutura, com o seu protocolo agnóstico e aberto.
 
 \section{Panorama atual das Exchanges\label{sec:current_exchange_landscape}}
@@ -355,26 +336,17 @@ LRx a essa ordem. LRx serve como pagamento aos \textit{Ring-Miners} que vão pro
 
 % Em Inglês:
 
-%\item \textbf{Order Broadcast}: The wallet sends the order and its signature to one or more relays. Relays update their public order book.
-%The protocol doesn't require order books to be built in a certain way, such as first-come-first-serve. Instead, relays have the power to
-%make their own design decisions in building their order books.
+%\item \textbf{Order Broadcast}: The wallet sends the order and its signature to one or more relays. Relays update their public order book. %The protocol doesn't require order books to be built in a certain way, such as first-come-first-serve. Instead, relays have the power to %make their own design decisions in building their order books.
 
 % Em Português:
 
-\item\textbf{Emissão da Ordem}: A carteira (\textit{wallet}) envia a ordem com a respetiva assinatura para um ou mais nós que atualizam o
-registo de ordens. Este protocolo não requer que estes registos sejam montados de uma maneira específica ou sigam um padrão de montagem
-previamente definido. Invés, os nós é que decidem qual o design instituido para a construção do conjunto de registos.
+\item\textbf{Emissão da Ordem}: A carteira (\textit{wallet}) envia a ordem com a respetiva assinatura para um ou mais nós que atualizam o registo de ordens. Este protocolo não requer que estes registos sejam montados de uma maneira específica ou sigam um padrão de montagem previamente definido. Invés, os nós é que decidem qual o design instituido para a construção do conjunto de registos.
 
 %%%%%%%%%%%%%----Ponto 4----%%%%%%%%%%%%%
 
-%\item \textbf{Liquidity Sharing}: Relays broadcast the order to other relays through any arbitrary communication medium. Once again, there
-%is flexibility how/whether nodes interact. To facilitate a certain level of network connectivity, there is a built-in liquidity sharing
-%relay-mesh using a consortium blockchain. As mentioned in the prior section, this relay-mesh is optimized for speed and inclusivity.
+%\item \textbf{Liquidity Sharing}: Relays broadcast the order to other relays through any arbitrary communication medium. Once again, there %is flexibility how/whether nodes interact. To facilitate a certain level of network connectivity, there is a built-in liquidity sharing %relay-mesh using a consortium blockchain. As mentioned in the prior section, this relay-mesh is optimized for speed and inclusivity.
 
-\item \textbf{Distribuição da Liquidação}: A ordem é transmitida e retransmitida de nó para nó através de um meio de comunicação arbitrário. De
-relembrar que existe flexibilidade entre quais os nós que integram a transmissão e como é que estes interactuam. Para facilitar a
-conectividade entre os nós existe um sistema de partilha de liquidação que está integrado na rede e utiliza uma \textit{blockchain} que
-opera através de um consórcio. Este sistema está optimizado para prioritizar a velocidade e inclusividade entre nós.
+\item \textbf{Distribuição da Liquidação}: A ordem é transmitida e retransmitida de nó para nó através de um meio de comunicação arbitrário. De relembrar que existe flexibilidade entre quais os nós que integram a transmissão e como é que estes interactuam. Para facilitar a conectividade entre os nós existe um sistema de partilha de liquidação que está integrado na rede e utiliza uma \textit{blockchain} que opera através de um consórcio. Este sistema está optimizado para prioritizar a velocidade e inclusividade entre nós.
 
 \begin{center}
 \begin{figurehere}
@@ -592,39 +564,22 @@ minimum height=15.6cm] (blockchain) {\parbox[b][15cm]{1.3cm}{blockchain}};
 
 % Em Inglês:
 
-%\item \textbf{Ring-Mining (Order Matching)}:  Ring-miners try to fill the order fully or partially at the given exchange rate or better by
-%matching it with multiple other orders. Ring-mining is the main reason why the protocol is able to provide high liquidity over any pair. If
-%the executed rate is better than what user Y specified, margin is shared amongst all orders in the order-ring. As a reward, the ring-miner
-%chooses between claiming part of the margin (Margin-Split, and giving back the LRx to the user), or simply keeping the LRx fee.
+%\item \textbf{Ring-Mining (Order Matching)}:  Ring-miners try to fill the order fully or partially at the given exchange rate or better by matching it with multiple other orders. Ring-mining is the main reason why the protocol is able to provide high liquidity over any pair. If the executed rate is better than what user Y specified, margin is shared amongst all orders in the order-ring. As a reward, the ring-miner chooses between claiming part of the margin (Margin-Split, and giving back the LRx to the user), or simply keeping the LRx fee.
 
 % Em Português:
 
-\item \textbf{Ring-Mining}: Os \textit{Ring-Minerst} tentam preencher uma ordem na totalidade ou parcialmente, mediante a taxa fornecida, ou
-até ao agrupar essa com outras ordens. \textit{Ring-Mining} é o principal motivo pelo qual o protocolo consegue dispor de alta liquidez sobre
-qualquer par de troca. Se a taxa de execução for melhor do que a que o utilizador \verb|Y| específicou na colocação da ordem então a margem
-resultante é distribuída por todas as outras ordens que foram agrupadas. Como recompensa, o \textit{Ring-Miner} escolhe entre reclamar parte
-dessa margem (\textit{Margin-split}, e devolve o restante LRx ao respetivo utilizador), ou colectar a totalidade de LRx.
+\item \textbf{Ring-Mining}: Os \textit{Ring-Minerst} tentam preencher uma ordem na totalidade ou parcialmente, mediante a taxa fornecida, ou até ao agrupar essa com outras ordens. \textit{Ring-Mining} é o principal motivo pelo qual o protocolo consegue dispor de alta liquidez sobre qualquer par de troca. Se a taxa de execução for melhor do que a que o utilizador \verb|Y| específicou na colocação da ordem então a margem resultante é distribuída por todas as outras ordens que foram agrupadas. Como recompensa, o \textit{Ring-Miner} escolhe entre reclamar parte dessa margem (\textit{Margin-split}, e devolve o restante LRx ao respetivo utilizador), ou colectar a totalidade de LRx.
 
 %%%%%%%%%%%%%----Ponto 6----%%%%%%%%%%%%%
 
 % Em Inglês:
 
-%\item \textbf{Verification \& Settlement}: The order-ring is received by LPSC. It makes multiple checks to verify the ring-miner supplied
-%data and determines if the order-ring can be settled fully or partially (depending on the fill rate of orders in-ring and tokens in users'
-%wallets). If all checks are successful, the contract atomically transfers the tokens to users and pays the ring-miner and wallet fees at the
-%same time. If user \verb|Y|'s balance as determined by the LPSC is insufficient, it will be considered scaled-down: a scaled-down order will
-%automatically scale up to its original size if sufficient funds are deposited to its address, unlike a cancellation, which is a one way
-%manual operation and cannot be reversed.
+%\item \textbf{Verification \& Settlement}: The order-ring is received by LPSC. It makes multiple checks to verify the ring-miner supplied data and determines if the order-ring can be settled fully or partially (depending on the fill rate of orders in-ring and tokens in users' wallets). If all checks are successful, the contract atomically transfers the tokens to users and pays the ring-miner and wallet fees at the same time. If user \verb|Y|'s balance as determined by the LPSC is insufficient, it will be considered scaled-down: a scaled-down order will automatically scale up to its original size if sufficient funds are deposited to its address, unlike a cancellation, which is a one way manual operation and cannot be reversed.
 
 % Em Português:
 
-\item \textbf{Verificação \& Liquidação }: O \textit{Order-ring} (bloco) é recebido pelo LPSC que executa múltiplas validações e determina
-se pode ser liquidado na totalidade ou parcialmente (dependendo do quão preenchido está e das \textit{tokens} nas carteiras dos utilizadores
-que colocaram essas ordens). Se todas as verificações forem bem sucedidas o contrato procede às transferências das \textit{tokens}, de forma
-atómica, e paga ao \textit{Ring-Miner} e à carteira, se a plataforma que a dispõe também solicitar uma taxa, ao mesmo tempo. Se porventura,
-os fundos do utilizador \verb|Y|, determinados pelo LPSC, não forem suficientes, essa ordem vai ser considerada do tipo \textit{scaled-down}
-e permanece neste estado até que fundos suficientes sejam depositados para o endereço que a desplotou. Este funcionamento é o contrário de
-um cancelamento, que é uma operação manual que não pode ser revertida.
+\item \textbf{Verificação \& Liquidação }: O \textit{Order-ring} (bloco) é recebido pelo LPSC que executa múltiplas validações e determina se pode ser liquidado na totalidade ou parcialmente (dependendo do quão preenchido está e das \textit{tokens} nas carteiras dos utilizadores que colocaram essas ordens). Se todas as verificações forem bem sucedidas o contrato procede às transferências das \textit{tokens}, de forma
+atómica, e paga ao \textit{Ring-Miner} e à carteira, se a plataforma que a dispõe também solicitar uma taxa, ao mesmo tempo. Se porventura, os fundos do utilizador \verb|Y|, determinados pelo LPSC, não forem suficientes, essa ordem vai ser considerada do tipo \textit{scaled-down} e permanece neste estado até que fundos suficientes sejam depositados para o endereço que a desplotou. Este funcionamento é o contrário de um cancelamento, que é uma operação manual que não pode ser revertida.
 
 \end{enumerate}
 
