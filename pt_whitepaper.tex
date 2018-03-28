@@ -597,19 +597,78 @@ atómica, e paga ao \textit{Ring-Miner} e à carteira, se a plataforma que a dis
 %
 %\begin{multicols}{2}
 
-\section{Operational Flexibility\label{sec:business_model}}
-It's important to note that Loopring's open standard allows participants significant flexibility in how they operate. Actors are free to implement novel business models and provide value for users, earning LRx fees on volume or other metrics in the process (if they so choose). The ecosystem is modular and meant to support participation from a multitude of applications.
+%%%%%%%%%%%%%----Secção 6----%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%----Ponto 1----%%%%%%%%%%%%%
 
-\subsection{Order Book\label{sec:order_book}}
-Relays can design their order books in any number of ways to display and match users' orders. A first implementation of our own order book follows an OTC model, where limit orders are positioned based on price alone. Timestamps of orders, in other words, have no bearing on the order book. However, a relay is free to design their order book in such a way as to emulate a typical centralized exchange's matching engine, where orders are ranked by price, while respecting timestamps as well. If a relay was inclined to offer this type of order book, they can own/integrate with a wallet, and have those wallet orders sent solely to the single relay, who would then be able to match orders based on time. Any such configuration is possible.
+% Em Inglês:
 
+%\section{Operational Flexibility\label{sec:business_model}} 
+%It's important to note that Loopring's open standard allows participants significant flexibility in how they operate. Actors are free to 
+% implement novel business models and provide value for users, earning LRx fees on volume or other metrics in the process (if they so choose).
+%The ecosystem is modular and meant to support participation from a multitude of applications.
 
-Whereas other DEX protocols at times require Relays to have resources - initial token balances to place taker orders - Loopring Relays need only find matchable orders to consummate a trade, and can do so without initial tokens.
+% Em Português:
 
-\subsection{Liquidity Sharing\label{sec:liquidity_sharing}}
-Relays are free to design how they share liquidity (orders) with each other. Our consortium blockchain is but one solution to accomplish this, and the ecosystem is free to network and communicate as they wish. Besides joining a consortium blockchain, they can build and manage their own, creating rules/incentives as they see fit. Relays can also work alone, as seen in the time-sensitive wallet implementation. Of course, there are clear advantages in communicating with other Relays in pursuit of network effects, however, different business models could merit peculiar sharing designs and split fees in any number of ways.
+\section{Flexibilidade de Operações\label(sec:business_model)}
 
+O protocolo Loopring permite a todos os seus participantes um elevado grau de flexibilidade. Estes estão habilitados a implementar
+novos modelos de negócio para melhorar a experiência de todos os utilizadores e podem ser recompensados em LRx mediante o volume de 
+participação ou outro tipo de métricas relacionadas com este processo (se assim o pretenderem).
+Este ecossistema é modular e capaz de suportar a participação de uma imensidade de aplicações. 
+
+%%%%%%%%%%%%%----Ponto 2----%%%%%%%%%%%%%
+
+% Em Inglês:
+
+%\subsection{Book Order\label{sec:order_book}}
+%Relays can design their order books in any number of ways to display and match users' orders. A first implementation of our own order book
+%follows an OTC model, where limit orders are positioned based on price alone. Timestamps of orders, in other words, have no bearing on the
+%order book. However, a relay is free to design their order book in such a way as to emulate a typical centralized exchange's matching
+%engine, where orders are ranked by price, while respecting timestamps as well. If a relay was inclined to offer this type of order book,
+%they can own/integrate with a wallet, and have those wallet orders sent solely to the single relay, who would then be able to match orders
+%based on time. Any such configuration is possible.
+
+%Whereas other DEX protocols at times require Relays to have resources - initial token balances to place taker orders - Loopring Relays need
+%only find matchable orders to consummate a trade, and can do so without initial tokens.
+
+% Em Português:
+
+\subsection{Registo de Orderns\label{sec:order_book}}
+
+Cada nó consegue planear, de várias maneiras, o registo mantido das ordens feitas dentro do Loopring, para melhor apresentar e corresponder as ordens dos utilizadores.
+Uma primeira implementação do nosso registo de ordens segue o modelo OTC, onde ordens com limites impostos são posicionadas com base no respetivo preço. O período em que as ordens
+são efetuadas não é significativo para o registo que segue o modelo OTC. Um nó consegue, de igual modo, decidir emular o comportamento de correspondência de uma \textit{Exchange} centralizada, 
+onde as ordens são posicionadas pelo preço ao mesmo tempo que respeitam o seu período de entrada. Se um nó está inclinado para adotar este tipo de modelo é possível integra-lo 
+com as \textit{wallets} para que estas apenas enviem as ordens para o nó específico, que estaria preparado para corresponder ordens considerando o período. 
+
+Os protocolos DEX necessitam que os nós detenham informação - balanço inicial do \textit{token} para ordens de compra imediatas \textit{taker orders} - os nós do Loopring 
+apenas precisam de encontrar ordens capazes de consumar a troca, e conseguem-no fazer sem acesso às \textit{tokens} iniciais.
+
+%%%%%%%%%%%%%----Ponto 3----%%%%%%%%%%%%%
+
+% Em Inglês:
+
+%\subsection{Sharing Liquidity\label{sec:liquidity_sharing}}\
+
+%Relays are free to design how they share liquidity (orders) with each other. Our consortium blockchain is but one solution to accomplish
+%this, and the ecosystem is free to network and communicate as they wish. Besides joining a consortium blockchain, they can build and manage
+%their own, creating rules/incentives as they see fit. Relays can also work alone, as seen in the time-sensitive wallet implementation. Of
+%course, there are clear advantages in communicating with other Relays in pursuit of network effects, however, different business models
+%could merit peculiar sharing designs and split fees in any number of ways.
+
+% Em Português:
+
+\subsection{Partilha de Liquidez - Dividendos\label{sec:liquidity_sharing}}
+
+No Loopring, os nós também são livres de planear como é distribuído o montante resultante da ordem de compra/venda. A \textit{blockchain}
+não é mais do que uma solução para este mecanismo ao permitir que o ecossistema comunique de forma independente. Os nós, apesar de emparelhados à \textit{blockchain} consensual 
+podem construir e gerir a sua própria \textit{blockchain}, com diferentes regras e incentivos que melhor se adeqúem ao modelo de negócio requesitado. Para além disso, os nós
+também estão preparados para trabalhar sozinhos, conforme mencionado no ponto anterior, com \textit{wallets} cuja implementação é temporalmente sensível. 
+Contudo, existem vantagens quando os nós comunicam entre si em prol de um funcionamento homogéneo da rede, ainda assim, 
+diferentes modelos de negócio podem tirar vantagem com um planeamento de partilha de liquidez personalizado.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Protocol Specification\label{sec:protocol}}
 
