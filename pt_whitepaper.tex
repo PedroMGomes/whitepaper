@@ -131,44 +131,52 @@ capacidade de trocar um crypoasset por outro é fundamental para o ecossistema, 
 Como tal, a troca de tokens com total confiança é um caso atraente a favor da tecnologia blockchain. No entanto, até agora, a maior parte dos entusiastas em "cryptos" contentaram-se em os trocar em "exchanges" tradicionais e centralizadas. O protocolo Loopring é necessário porque, tal como a Bitcoin \cite{nakamoto2008bitcoin} sublinhou enfaticamente em relação às trocas de dinheiro eletrónico "peer-to-peer",
 \enquote{os principais benefícios são perdidos se for necessário um terceiro confiável para evitar gastos duplicados}. Da mesma forma, os principais benefícios dos ativos descentralizados são perdidos se for preciso utilizar "exchanges" centralizadas.
 
-Negociar tokens descentralizados em exchanges centralizadas não sentido do ponto de vista filosófico, pois falha em defender os valores que estes projetos descentralizados propõem. Também existem inúmeros riscos práticos e limitações no uso de exchanges centralizadas. Estes riscos são descritos abaixo. As exchanges descentralizadas (DEXs) \cite{schuh2015bitshares} \cite{bancor} \cite{kyber} procuraram abordar essas questões e, em muitos casos, foram bem sucedidos em minimizar os riscos de segurança ao usar blockchains para desintermediação. Porém, à medida que as DEX tornam-se cruciais infraestruturas para a nova economia, ainda há bastante espaço para a melhoria do seu desempenho. O
+Negociar tokens descentralizados em exchanges centralizadas não tem sentido do ponto de vista filosófico, pois falha em defender os valores que estes projetos descentralizados propõem. Também existem inúmeros riscos práticos e limitações no uso de exchanges centralizadas. Estes riscos são descritos abaixo. As exchanges descentralizadas (DEXs) \cite{schuh2015bitshares} \cite{bancor} \cite{kyber} procuraram abordar essas questões e, em muitos casos, foram bem sucedidos em minimizar os riscos de segurança ao usar blockchains para desintermediação. Porém, à medida que as DEX tornam-se cruciais infraestruturas para a nova economia, ainda há bastante espaço para a melhoria do seu desempenho. O
 Loopring visa fornecer as ferramentas modulares para essa infraestrutura, com o seu protocolo agnóstico e aberto.
 
 \section{Panorama atual das Exchanges\label{sec:current_exchange_landscape}}
 
-\subsection{Inadequação das Exchanges centralizadas}
+\subsection{Inadequação das Exchanges Centralizadas}
 Os três principais riscos das exchanges centralizadas são; 1) Falta de segurança, 2) Falta de transparência, e 3) Falta de liquidez.
 
-\textbf{Falta de Segurança} advém do facto dos utilizadores entregarem o controlo das suas chaves privadas (fundos) a uma entidade centralizada. Os riscos de segurança e de "hacks" a que as exchanges centralizadas estão sujeitas são bem conhecidos \cite{coincheckhack}  \cite{mcmillan2014inside}, porém são normalmente aceites como \enquote{table stakes}. Exchanges centralizadas continuam a ser alvos preferenciais para os hackers atacarem, visto que os seus servidores têm, em sua custódia, milhões de dólares em fundos de utilizadores. Os programadores destas plataformas também podem cometer erros acidentais com fundos dos seus utilizadores.
+\textbf{Falta de Segurança} advém do facto dos utilizadores entregarem o controlo das suas chaves privadas (fundos) a uma entidade centralizada. Os riscos de segurança e de "hacks" a que as exchanges centralizadas estão sujeitas são bem conhecidos \cite{coincheckhack}  \cite{mcmillan2014inside}, porém são normalmente aceites como \enquote{table stakes}. Exchanges centralizadas continuam a ser alvos preferenciais para os hackers atacarem, visto que os seus servidores têm em custódia, milhões de dólares em fundos de utilizadores. Os programadores destas plataformas também podem cometer erros acidentais com os fundos dos seus utilizadores.
 
 \textbf{Falta de Transparência} expõe os utilizadores a exchanges que podem agir de forma desonesta. A diferença aqui são as possíveis intenções maliciosas, visto que que os utilizadores, quando usam exchanges centralizadas, não estão a negociar os seus próprios ativos, mas sim a negociar a promessa da troca desses mesmos, através de um título de dívida (IOU). Para os levantar, os utilizadores requisitam esses títulos à exchange e recebem os seus tokens em carteiras externas. Ao longo deste processo existe uma clara falta de transparência e, para além disso, a exchange pode terminar ou parar temporariamente os seus serviços, congelar a sua conta, ir à falência, etc. Também é possível que usem ativos de utilizadores para outros fins enquanto estão sob sua alçada, como emprestá-los ou cedê-los a terceiros. Para além da perda total dos fundos dos utilizadores, a falta de transparência também sujeita-os a taxas de negociação mais elevadas, atrasos em picos de procura, regulamentação e "front-running".
 
-\textbf{Falta de Liquidez.} Do ponto de vista dos operadores das plataformas de troca de ativos (exchanges), a fragmentação da liquidez inibe a entrada de novas exchanges no mercado devido ao cenário do "vencedor leva tudo". Em primeiro lugar, a exchange com o maior número de pares de troca ganha, porque os utilizadores desejam
+\textbf{Falta de Liquidez.} Do ponto de vista dos operadores das plataformas de troca de ativos (exchanges), a fragmentação da liquidez inibe a entrada de novas exchanges no mercado devido ao cenário do "vencedor leva tudo". Em primeiro lugar, a "exchange" com o maior número de pares de troca ganha, porque os utilizadores gostam de poder executar todos os seus negócios numa só plataforma. Em segundo lugar, a "exchange" com o maior caderno de !!order book!! ganha, devido aos spreads favoráveis de "bid-ask" para cada par de negociação. Isto desencoraja nova concorrência porque torna-se difícil criar liquidez inicial. Como resultado, algumas "exchanges" possuem a maior "fatia" do mercado, mesmo apesar de queixas de utilizadores e dos incidentes resultantes de "hacks". Note-se que, à medida que as "exchanges" centralizadas vão ganhando quota de mercado, tornam-se alvos ainda maiores para "hacks".
+ %From the point of view of exchange operators, fragmented liquidity inhibits entry by new exchanges because of two winner-takes-all scenarios. First, the exchange with the greatest number of trading pairs wins, because users find it desirable to conduct all their trades on one exchange. Second, the exchange with the largest order book wins, because of favorable bid-ask spreads for each trading pair. This discourages competition from newcomers because it is difficult for them to build up initial liquidity. As a result, many exchanges command a high market share despite user complaints and even major hacking incidents. It's worth noting that as centralized exchanges win market share, they become an ever-larger hacking target.
 
- From the point of view of exchange operators, fragmented liquidity inhibits entry by new exchanges because of two winner-takes-all scenarios. First, the exchange with the greatest number of trading pairs wins, because users find it desirable to conduct all their trades on one exchange. Second, the exchange with the largest order book wins, because of favorable bid-ask spreads for each trading pair. This discourages competition from newcomers because it is difficult for them to build up initial liquidity. As a result, many exchanges command a high market share despite user complaints and even major hacking incidents. It's worth noting that as centralized exchanges win market share, they become an ever-larger hacking target.
+!!Do ponto de vista dos utilizadores, a sua experiência é reduzida devido à fragmentação da liquidez. Numa "exchange" centralizada, os utlizadores só estão habilitados a negociar dentros dos  "pools" de liquidez da "exchange" e entre os pares de tokens que são suportados!!. Para negociar o token \verb|A| pelo token \verb|B|, os utilizadores têm que ir a uma "exchange" que suporte os dois tokens, ou registarem-se em "exchanges" diferentes, tendo que divulgar mais uma vez os seus dados pessoais. Geralmente precisam de executar trocas preliminares ou intermédias, normalmente de BTC ou ETH, a pagar !!bid-ask spreads!! no processo. Finalmente, os "order books" podem não ser profundos o suficiente para completar o tamanho de determinada compra ou venda, sem !!meterial slippage!!. Mesmo que a "exchange" afirme que processa um grande volume, não há garantias que esse volume e liquidez não sejam falsos \cite{fakevolume}.
+%From the point of view of users, fragmented liquidity significantly reduces user experience. In a centralized exchange, users are only able to trade within the exchange's own liquidity pools, against its own order book, and between its supported token pairs. To trade token \verb|A| for token \verb|B|, users must go to an exchange that supports both tokens or register at different exchanges, disclosing personal information. Users often need to execute preliminary or intermediate trades, typically against BTC or ETH, paying bid-ask spreads in the process. Finally, the order books may not be deep enough to complete the trade without material slippage. Even if the exchange purports to process large volumes, there is no guarantee that this volume and liquidity is not fake \cite{fakevolume}.
 
-From the point of view of users, fragmented liquidity significantly reduces user experience. In a centralized exchange, users are only able to trade within the exchange's own liquidity pools, against its own order book, and between its supported token pairs. To trade token \verb|A| for token \verb|B|, users must go to an exchange that supports both tokens or register at different exchanges, disclosing personal information. Users often need to execute preliminary or intermediate trades, typically against BTC or ETH, paying bid-ask spreads in the process. Finally, the order books may not be deep enough to complete the trade without material slippage. Even if the exchange purports to process large volumes, there is no guarantee that this volume and liquidity is not fake \cite{fakevolume}.
+O resultado são !silos" de liquidez e um ecossistema fragmentado que lembra o sistema financeiro atual, com volume de negócios significativo em apenas poucas "exchanges". As promessas de que a blockchain permite liquidez global, não têm mérito dentro das "exchanges" centralizadas.
+%The result is disconnected silos of liquidity and a fragmented ecosystem that resembles the legacy financial system, with significant trading volume centralized on few exchanges. The global liquidity promises of blockchains hold no merit within centralized exchanges.
 
-The result is disconnected silos of liquidity and a fragmented ecosystem that resembles the legacy financial system, with significant trading volume centralized on few exchanges. The global liquidity promises of blockchains hold no merit within centralized exchanges.
+\subsection{Inadequação das Exchanges Descentralizadas}
+Em parte, as "exchanges" descentralizadas diferem das "exchanges" centralizadas porque os utilizadores mantém o controlos das suas chaves privadas (ativos), conseguindo executar trocas diretamente na blockchain subjacente. A total confiança oferecida pelas criptomoedas ajudam a mitigar muitos dos riscos relacionados com a segurança descritos acima. No entanto, ainda persistem alguns problemas em relação ao desempenho e limitações estruturais.
+%Decentralized exchanges differ from centralized exchanges in part because users maintain control of their private-keys (assets) by performing trades directly on the underlying blockchain. By leveraging the trustless technology of cryptocurrencies themselves, they successfully mitigate many of the abovementioned risks surrounding security. However, problems persist in regards to performance and structural limitations. 
 
-\subsection{Inadequacies of Decentralized Exchanges}
-Decentralized exchanges differ from centralized exchanges in part because users maintain control of their private-keys (assets) by performing trades directly on the underlying blockchain. By leveraging the trustless technology of cryptocurrencies themselves, they successfully mitigate many of the abovementioned risks surrounding security. However, problems persist in regards to performance and structural limitations. 
+!!A liquidez continua a ser um problema muitas das vezes, uma vez que os utilizadores devem procurar contrapartes em diferentes "liquidity pools and standards"!!. Os efeitos da liquidez fragmentada continuam a estar presentes de as DEXs ou dApps em geral, não implementarem padrões consistentes para interoperar, e se os pedidos não forem partilhados/propagados numa rede ampla. A liquidez das ordens limitadas e, especificamente, a sua resiliência -- quão rápido são regeneradas -- podem afetar significativamente a estratégia de negociação ideal \cite{limitorderliquidity}. A ausência de tais padrões tem resultado, não só em reduzida liquidez, como também a exposição a um leque de potenciais contratos inteligentes proprietários inseguros.
+%Liquidity often remains an issue as users must search for counterparties across disparate liquidity pools and standards. Fragmented liquidity effects are present if DEXs or dApps at large don't employ consistent standards to interoperate, and if orders are not shared/propagated across a wide network. The liquidity of limit order books, and, specifically, their resiliency -- how fast filled limit orders are regenerated -- can significantly affect optimal trading strategies \cite{limitorderliquidity}. The absence of such standards has resulted not only in reduced liquidity, but also exposure to an array of potentially insecure proprietary smart contracts.
 
-Liquidity often remains an issue as users must search for counterparties across disparate liquidity pools and standards. Fragmented liquidity effects are present if DEXs or dApps at large don't employ consistent standards to interoperate, and if orders are not shared/propagated across a wide network. The liquidity of limit order books, and, specifically, their resiliency -- how fast filled limit orders are regenerated -- can significantly affect optimal trading strategies \cite{limitorderliquidity}. The absence of such standards has resulted not only in reduced liquidity, but also exposure to an array of potentially insecure proprietary smart contracts.
+Além disso, como as trocas são realizadas na blockchain, as DEXs herdam as limitações da blockchain subjacente, a saber: escalabilidade, atrasos na execução (mineração) e modificações dispendiosas nas ordens. Por isso, os livros de ordens não escalam propriamente bem, já que a execução do código da blockchain tem um custo (gás), tornando as cadências de cancelamento de múltiplos pedidos proibitivamente caras.
+%Furthermore, since trades are performed on chain, DEXs inherit the limitations of the underlying blockchain, namely: scalability, delays in execution (mining), and costly modifications to orders. Thus, blockchain order books do not scale particularly well, as executing code on the blockchain incurs a cost (gas), making multiple order-cancellation cadences prohibitively expensive. 
 
-Furthermore, since trades are performed on chain, DEXs inherit the limitations of the underlying blockchain, namely: scalability, delays in execution (mining), and costly modifications to orders. Thus, blockchain order books do not scale particularly well, as executing code on the blockchain incurs a cost (gas), making multiple order-cancellation cadences prohibitively expensive. 
+!!Finalmente, como o caderno de ordens na blockchain é publico, a transação para submeter uma ordem é visível pelos mineiros enquanto esperam que o próximo bloco seja minerado e posto num cadernos de ordens. Este atraso expõe os utilizadores ao risco de serem vítimas de "front-running" e de terem o preço ou a execução contra eles.!!
+%Finally, because blockchain order books are public, the transaction to place an order is visible by miners as it awaits being mined into the next block and placed into an order book. This delay exposes the user to the risk of being front run and having the price or execution move against him.
 
-Finally, because blockchain order books are public, the transaction to place an order is visible by miners as it awaits being mined into the next block and placed into an order book. This delay exposes the user to the risk of being front run and having the price or execution move against him.
+\subsection{Soluções Híbridas}
+Pela razões acima destacadas, soluções puramente baseadas em blockchain têm limitações que as tornam não competitivas com "exchanges" centralizadas. Existe uma balanço entre a confiabilidade inerente da blockchain e da velocidade e flexibilidade oferecida pelas "exchanges" centralizadas. Protocolos como Loopring e 0x \cite{warren20170x} propõem uma solução assente em blockchain, mas a gestão das ordens é executada fora dela. Estas soluções giram à volta de contratos inteligentes, mas minimizam as limitações de escalabilidade realizando várias funções "off-chain" e dando flexibilidade aos nós para cumprirem o seu papel crítico para a rede. Porém, as desvantagens permanecem no modelo híbrido \cite{costofdecent}. O protocolo Loopring propõe, ao longo deste documento, uma abordagem com diferenças significativas para este modelo.
+%For the above reasons, purely blockchain-based exchanges have limitations that make them uncompetitive with centralized exchanges. There is a tradeoff between on-chain inherent trustlessness, and centralized exchange speed and order flexibility. Protocols such as Loopring and 0x \cite{warren20170x} extend a solution of on-chain settlement with off-chain order management. These solutions revolve around open smart contracts, but navigate scalability limitations by performing several functions off-chain and giving nodes flexibility in fulfilling critical roles for the network. However, drawbacks remain for the hybrid model as well \cite{costofdecent}. The Loopring protocol proposes meaningful differences in our approach to a hybrid solution throughout this paper.
 
-\subsection{Hybrid Solutions}
-For the above reasons, purely blockchain-based exchanges have limitations that make them uncompetitive with centralized exchanges. There is a tradeoff between on-chain inherent trustlessness, and centralized exchange speed and order flexibility. Protocols such as Loopring and 0x \cite{warren20170x} extend a solution of on-chain settlement with off-chain order management. These solutions revolve around open smart contracts, but navigate scalability limitations by performing several functions off-chain and giving nodes flexibility in fulfilling critical roles for the network. However, drawbacks remain for the hybrid model as well \cite{costofdecent}. The Loopring protocol proposes meaningful differences in our approach to a hybrid solution throughout this paper.
 
+\section{Protocolo Loopring\label{sec:loopring_protocol}}
+Loopring não é uma DEX, mas um protocolo modular para construir DEXs em múltiplas blockchains. Desmontámos as partes constituintes de uma "exchange" tradicional, e oferecemos um conjunto de contratos públicos inteligentes e atores descentralizados no lugar dela. As funções da rede incluem carteiras, blockchains de consórcio com partilha de liquidez, navegadores de caderno de ordens, Ring-Miners e serviços para tokenização de ativos. Antes de definir cada uma, devemos primeiro perceber as ordens no Loopring.
+%Loopring is not a DEX, but a modular protocol for building DEXs on multiple blockchains. We disassemble the component parts of a traditional exchange and offer a set of public smart contracts and decentralized actors in its place. The roles in the network include wallets, relays, liquidity-sharing consortium blockchains, order book browsers, Ring-Miners, and asset tokenization services. Before defining each, we should first understand Loopring orders. 
 
-\section{Loopring Protocol\label{sec:loopring_protocol}}
-Loopring is not a DEX, but a modular protocol for building DEXs on multiple blockchains. We disassemble the component parts of a traditional exchange and offer a set of public smart contracts and decentralized actors in its place. The roles in the network include wallets, relays, liquidity-sharing consortium blockchains, order book browsers, Ring-Miners, and asset tokenization services. Before defining each, we should first understand Loopring orders. 
-
-\subsection{Order Ring\label{sec:order_ring}}
-Loopring orders are expressed in what we call a Unidirectional Order Model (UDOM)\cite{coinport2014udom}. UDOM expresses orders as token exchange requests, \verb|amountS|/\verb|amountB|, (amount to sell/buy)  instead of bids and asks. Since every order is just an exchange rate between two tokens, a powerful feature of the protocol is the mixing and matching of multiple orders in circular trade. By using up to 16 orders instead of a single trading pair, there is a dramatic increase in liquidity and potential for price improvement. 
+\subsection{!!Order Ring!!\label{sec:order_ring}}
+!!Loopring orders!! são expressas no que chamamos de Modelo Unidirecional de Ordens (UDOM)\cite{coinport2014udom}. UDOM expressa as ordens como pedidos de troca de tokens, \verb|montanteV|/\verb|montanteC|, (montante para venda/compra) em vez de licitações e solicitações. Uma vez que cada ordem é apenas uma taxa de câmbio entre dois tokens, uma característica poderosa do protocolo é a capacidade de misturar e corresponder várias ordens no !!comércio circular!!. Usando até 16 ordens em vez de um único par de troca, existe um aumento dramático de liquidez e uma potencial melhoria do preço.
+%Loopring orders are expressed in what we call a Unidirectional Order Model (UDOM)\cite{coinport2014udom}. UDOM expresses orders as token exchange requests, \verb|amountS|/\verb|amountB|, (amount to sell/buy)  instead of bids and asks. Since every order is just an exchange rate between two tokens, a powerful feature of the protocol is the mixing and matching of multiple orders in circular trade. By using up to 16 orders instead of a single trading pair, there is a dramatic increase in liquidity and potential for price improvement. 
 
 \begin{center}
 \begin{figurehere}
@@ -204,20 +212,20 @@ Loopring orders are expressed in what we call a Unidirectional Order Model (UDOM
   \node [order] (order2) 
  {%
  \begin{tabular}{l}
-  \textbf{ORDER\#2}\\
-  \textbf{owner: Y}\\
-  \textbf{amountS: 9B}\\
-  \textbf{amountB: 12C}
+  \textbf{ORDEM\#2}\\
+  \textbf{titular: Y}\\
+  \textbf{montanteV: 9B}\\
+  \textbf{montanteC: 12C}
  \end{tabular}
  };
  
   \node [order, below of=order2, xshift=-3.5cm] (order1) 
  {%
  \begin{tabular}{l}
-  \textbf{ORDER\#1}\\
-  \textbf{owner: X}\\
-  \textbf{amountS: 10000A}\\
-  \textbf{amountB: 2B}
+  \textbf{ORDEM\#1}\\
+  \textbf{titular: X}\\
+  \textbf{montanteV: 10000A}\\
+  \textbf{montanteC: 2B}
  \end{tabular}
  };
  
@@ -225,10 +233,10 @@ Loopring orders are expressed in what we call a Unidirectional Order Model (UDOM
   \node [order, below of=order2, xshift=3.5cm] (order3) 
  {%
  \begin{tabular}{l}
-  \textbf{ORDER\#3}\\
-  \textbf{owner: Z}\\
-  \textbf{amountS: 100C}\\
-  \textbf{amountB: 160A}
+  \textbf{ORDEM\#3}\\
+  \textbf{titular: Z}\\
+  \textbf{montanteV: 100C}\\
+  \textbf{montanteC: 160A}
  \end{tabular}
  };
  
@@ -238,13 +246,14 @@ Loopring orders are expressed in what we call a Unidirectional Order Model (UDOM
 
 \end{tikzpicture}
 
-\caption{An order-ring of 3 orders}
+\caption{!!An order-ring of 3 orders!!}
 \label{fig:ring}
 \end{figurehere}
 \end{center}
 
 
-The above figure shows an order-ring of 3 orders. Each order's token to sell (\verb|tokenS|) is another order's token to buy (\verb|tokenB|). It creates a loop that allows each order to exchange their desired tokens without requiring an opposing order for its pair. Traditional order pair trades can, of course, still be executed, in what is essentially a special case of an order-ring. 
+A figura acima representa uma !!order-ring of 3 orders". Cada ordem para vender um token (\verb|tokenV|) é outra ordem para comprar um token (\verb|tokenC|). É criado um loop que permite que cada ordem seja trocada pelo token desejado sem requerer uma oferta oposta pelo seu par. Claro que as ordens tradicionais também podem ser executadas, mas neste caso, trata-se de um caso especial de uma !!"order ring"!!.
+%The above figure shows an order-ring of 3 orders. Each order's token to sell (\verb|tokenS|) is another order's token to buy (\verb|tokenB|). It creates a loop that allows each order to exchange their desired tokens without requiring an opposing order for its pair. Traditional order pair trades can, of course, still be executed, in what is essentially a special case of an order-ring. 
 
 \begin{definition}[order-ring] Let $C_{0}$, $C_{1}$, $\cdots$, $C_{n-1}$ be $n$ different tokens, $O_{0\rightarrow 1}$, $\cdots$, $O_{i\rightarrow i\oplus 1}$, $\cdots$, $O_{n-1 \rightarrow 0}$ be $n$ orders. Those orders can form a order-ring for trading:
 $$O_{0\rightarrow 1} \rightarrow \cdots \rightarrow O_{i\rightarrow i\oplus 1} \rightarrow \cdots \rightarrow O_{n-1\rightarrow 0} \text{, }$$
@@ -568,7 +577,7 @@ minimum height=15.6cm] (blockchain) {\parbox[b][15cm]{1.3cm}{blockchain}};
 
 % Em Português:
 
-\item \textbf{Ring-Mining}: Os \textit{Ring-Minerst} tentam preencher uma ordem na totalidade ou parcialmente, mediante a taxa fornecida, ou até ao agrupar essa com outras ordens. \textit{Ring-Mining} é o principal motivo pelo qual o protocolo consegue dispor de alta liquidez sobre qualquer par de troca. Se a taxa de execução for melhor do que a que o utilizador \verb|Y| específicou na colocação da ordem então a margem resultante é distribuída por todas as outras ordens que foram agrupadas. Como recompensa, o \textit{Ring-Miner} escolhe entre reclamar parte dessa margem (\textit{Margin-split}, e devolve o restante LRx ao respetivo utilizador), ou colectar a totalidade de LRx.
+\item \textbf{Ring-Mining}: Os \textit{Ring-Miners} tentam preencher uma ordem na totalidade ou parcialmente, mediante a taxa fornecida, ou até ao agrupar essa com outras ordens. \textit{Ring-Mining} é o principal motivo pelo qual o protocolo consegue dispor de alta liquidez sobre qualquer par de troca. Se a taxa de execução for melhor do que a que o utilizador \verb|Y| específicou na colocação da ordem então a margem resultante é distribuída por todas as outras ordens que foram agrupadas. Como recompensa, o \textit{Ring-Miner} escolhe entre reclamar parte dessa margem (\textit{Margin-split}, e devolve o restante LRx ao respetivo utilizador), ou colectar a totalidade de LRx.
 
 %%%%%%%%%%%%%----Ponto 6----%%%%%%%%%%%%%
 
@@ -581,7 +590,6 @@ minimum height=15.6cm] (blockchain) {\parbox[b][15cm]{1.3cm}{blockchain}};
 \item \textbf{Verificação \& Liquidação }: O \textit{Order-ring} (bloco) é recebido pelo LPSC que executa múltiplas validações e determina se pode ser liquidado na totalidade ou parcialmente (dependendo do quão preenchido está e das \textit{tokens} nas carteiras dos utilizadores que colocaram essas ordens). Se todas as verificações forem bem sucedidas o contrato procede às transferências das \textit{tokens}, de forma atómica, e paga ao \textit{Ring-Miner} e à carteira, se a plataforma que a dispõe também solicitar uma taxa, ao mesmo tempo. Se porventura, os fundos do utilizador \verb|Y|, determinados pelo LPSC, não forem suficientes, essa ordem vai ser considerada do tipo \textit{scaled-down} e permanece neste estado até que fundos suficientes sejam depositados para o endereço que a desplotou. Este funcionamento é o contrário de um cancelamento, que é uma operação manual que não pode ser revertida.
 
 \end{enumerate}
-
 
 %
 %\end{multicols}
@@ -642,10 +650,17 @@ No Loopring, os nós também são livres de planear como é distribuído o monta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Protocol Specification\label{sec:protocol}}
+%%%%%%%%%%%%%%% - Secção 7 - %%%%%%%%%%%%%%%%%
 
-\subsection{Anatomy of an Order\label{anatomy}}
-An order is a pack of data that describes the intent of the user's trade. A Loopring order is defined using the Uni-Directional Order Model, or UDOM, as follows:
+% \section{Protocol Specification\label{sec:protocol}}
+\section{Especificação do Protocolo\label{sec:protocol}}
+
+% \subsection{Anatomy of an Order\label{anatomy}}
+\subsection{Estrutura de uma Ordem\label{anatomy}}
+
+%An order is a pack of data that describes the intent of the user's trade. A Loopring order is defined using the Uni-Directional Order Model, or UDOM, as follows:
+
+Uma ordem é uma estrutura de dados que descreve a intenção de troca/compra/venda de um utilizador. Dentro do Loopring, uma ordem é definida através de um modelo unidirecional ( \textit{UDOM}) conforme o seguinte:
 
 \begin{verbatim}
   message Order {
@@ -674,21 +689,29 @@ An order is a pack of data that describes the intent of the user's trade. A Loop
   }
 \end{verbatim}
 
+%To ensure the origin of the order, it is signed against the hash of its parameters, excluding \verb|authAddr|, with the user's private-key. The \verb|authAddr| parameter is used for signing  order-rings that this order is part of, which prevents front-running. Please reference section \ref{sec:dual_authoring} for more details. The signature is represented by the \verb|v|, \verb|r|, and \verb|s| fields, and is sent alongside the order parameters over the network. This guarantees the order stays immutable during its whole lifetime. Even though the order never changes, the protocol can still compute its current state based on the balance of its address along with other variables.
 
-To ensure the origin of the order, it is signed against the hash of its parameters, excluding \verb|authAddr|, with the user's private-key. The \verb|authAddr| parameter is used for signing  order-rings that this order is part of, which prevents front-running. Please reference section \ref{sec:dual_authoring} for more details. The signature is represented by the \verb|v|, \verb|r|, and \verb|s| fields, and is sent alongside the order parameters over the network. This guarantees the order stays immutable during its whole lifetime. Even though the order never changes, the protocol can still compute its current state based on the balance of its address along with other variables.
+Para assegurar a origem de uma ordem, esta é assinada contra a \textit{hash} dos parâmetros que a constituem, através da chave-privada do utilizador. O parâmetro \verb|authAddr| não entra neste processo de assinatura; invés, é utilizado para assinar os \textit{order-rings} de que esta ordem faz parte, com o objetivo de prevenir o \textit{front-running}. Para maior detalhe consultar a secção \ref{sec:dual_authoring}.  A assinatura é representada pelos campos \verb|v|, \verb|r| e \verb|s| e é enviada juntamente com os parâmetros que constituem a ordem, pelo sistema. Isto garante que a ordem se mantém imutável durante o seu período de vida. O protocolo Loopring consegue determinar o seu estado atual e outras condicionates com base no balanço do endereço que a iniciou, mesmo que este nunca mude.
 
+% UDOM doesn't include a price (which must be a floating-point number by nature), but, instead uses the term \verb|rate| or $r$, which is expressed as \verb|amountS|/\verb|amountB|. The rate is not a floating-point number but an expression that will only be evaluated with other unsigned integers on demand, to keep all intermediate results as unsigned integers and increase calculation accuracy. 
 
+UDOM não inclui o preço (que deve ser, por natureza, um número do tipo \textit{floating point}), invés, utiliza o termo \verb|rate| or $r$, que é expresso através da relação \verb|amountS|/\verb|amountB|. A \verb|rate| (taxa), que não é um número do tipo \textit{floating-point}, é então uma expressão que é avaliada somente com números do tipo \textit{unsigned-integer}, quando necessário. Ao manter todos os resultados intermediários deste tipo é possível aumentar a precisão na computação dos cálculos.
 
-UDOM doesn't include a price (which must be a floating-point number by nature), but, instead uses the term \verb|rate| or $r$, which is expressed as \verb|amountS|/\verb|amountB|. The rate is not a floating-point number but an expression that will only be evaluated with other unsigned integers on demand, to keep all intermediate results as unsigned integers and increase calculation accuracy. 
+% \subsubsection{Buy Amounts}
+\subsection(Montantes de Compra)
 
-\subsubsection{Buy Amounts}
+%When a ring-miner ring-matches orders, it's possible that a better rate will be executable, allowing users to get more \verb|tokenB| than the \verb|amountB| they specified. However, if \verb|buyNoMoreThanAmountB| is set to \verb|True|, the protocol ensures users receive no more than \verb|amountB| of \verb|tokenB|. Thus, UDOM's \verb|buyNoMoreThantokenB| parameter determines when an order is considered completely filled. \verb|buyNoMoreThantokenB| applies a cap on either \verb|amountS| or \verb|amountB|, and allows users to express more granular trade intentions than traditional buy/sell orders.
 
-When a ring-miner ring-matches orders, it's possible that a better rate will be executable, allowing users to get more \verb|tokenB| than the \verb|amountB| they specified. However, if \verb|buyNoMoreThanAmountB| is set to \verb|True|, the protocol ensures users receive no more than \verb|amountB| of \verb|tokenB|. Thus, UDOM's \verb|buyNoMoreThantokenB| parameter determines when an order is considered completely filled. \verb|buyNoMoreThantokenB| applies a cap on either \verb|amountS| or \verb|amountB|, and allows users to express more granular trade intentions than traditional buy/sell orders.
+Quando um \textit{ring-miner} combina diferentes ordens é possível aplicar uma taxa melhor que ao \verb|amountB| inicialmente especificado pelos utilizadores, permitindo que estes obtenham mais \verb|tokenB|. Contudo, se o parâmetro \verb|buyNoMoreThanAmountB| estiver definido como \verb|True|, o procolo garante que não são aplicadas quaisqueres taxas diferentes às definidas. O parâmetro \verb|buyNoMoreThantokenB| determina quando uma ordem é considerada como preenchida ao aplicar um limite sobre o \verb|amountS| ou sobre o \verb|amountB|. Isto permite aos utilizadores definir com maior granularidade intenções de troca para além das intenções tradicionais de compra e venda.
 
-For example: with \verb|amountS| = 10 and \verb|amountB| = 2, the rate $r$ = 10/2 = 5. Thus the user is willing to sell 5 \verb|tokenS| for each \verb|tokenB|. The ring-miner matches and finds the user a rate of 4, allowing the user to receive 2.5 \verb|tokenB| instead of 2. However, if the user only wants 2 \verb|tokenB| and set the \verb|buyNoMoreThanAmountB| flag to \verb|True|, the LPSC performs the transaction at a rate of 4 and the user sells 4 \verb|tokenS| for each \verb|tokenB|, effectively saving 2 \verb|tokenS|. Keep in mind this does not take into account mining fees (See section \ref{sec:fee_model}).
+%For example: with \verb|amountS| = 10 and \verb|amountB| = 2, the rate $r$ = 10/2 = 5. Thus the user is willing to sell 5 \verb|tokenS| for each \verb|tokenB|. The ring-miner matches and finds the user a rate of 4, allowing the user to receive 2.5 \verb|tokenB| instead of 2. However, if the user only wants 2 \verb|tokenB| and set the \verb|buyNoMoreThanAmountB| flag to \verb|True|, the LPSC performs the transaction at a rate of 4 and the user sells 4 \verb|tokenS| for each \verb|tokenB|, effectively saving 2 \verb|tokenS|. Keep in mind this does not take into account mining fees (See section \ref{sec:fee_model}).
 
-Indeed, if we use
+Tem-se o seguinte exemplo: Com \verb|amountS| = 10 e \verb|amountB| = 2, a taxa é $r$ = 10/2 = 5. Isto significa que o utilizador está disposto a vender 5 \verb|tokensS| por cada \verb|tokenB|. Porém, o \textit{ring-miner} encontra uma taxa de 4 que aumenta o montande recebido de \verb|tokenB| para 2.5, ao contrário dos iniciais 2. Se o utilizador quiser apenas 2 \verb|tokenB| e definir o parâmetro \verb|buyNoMoreThanAmountB| para \verb|True| o LPSC irá efetuar a transação com a taxa encontrada (4) e o utilizador irá vender 4 \verb|tokenS| por cada \verb|tokenB|, economizando os previstos 2 \verb|tokensS|. Este processo não tem em consideração os honorários para \textit{ring-miners} 
 
+(Ver secção \ref{sec:fee_model}).
+
+%Indeed, if we use
+O seguinte excerto:
 
 \begin{verbatim}
 	      Order(amountS,tokenS,
@@ -696,24 +719,32 @@ Indeed, if we use
 	            buyNoMoreThantokenB)
 \end{verbatim}
 
-to represent an order in a simplified form, then for ETH/USD markets on a traditional exchange, traditional buy-sell modeling can express the 1st and the 3rd order below, but not the other two:
+%to represent an order in a simplified form, then for ETH/USD markets on a traditional exchange, traditional buy-sell modeling can express the 1st and the 3rd order below, but not the other two:
+é usado para representar uma ordem, num formato simplificado, entre os mercados ETH/USD, numa \textit{Exchange} tradicional com um modelo de venda-compra capaz de expressar a primeira e terceira ordem, mas não as outras duas.
 
 \begin{enumerate}
-	\item Sell 10 ETH at price of 300 USD/ETH. This order can expressed as: \verb|Order(10, ETH, 3000, USD, False)|.
-	\item Sell ETH at price of 300 USD/ETH to get 3000 USD. This order can expressed as: \verb|Order(10, ETH, 3000, USD, True)|.
-	\item Buy 10 ETH at price of 300 USD/ETH, This order can expressed as: \verb|Order(3000, USD, 10, ETH, True)|.
-	\item Spend 3000 USD to buy as many ETH as possible at price of 300 USD/ETH, This order can expressed as: \verb|Order(3000, USD, 10, ETH, False)|.
+	\item Vender 10 ETH a 300 USD/ETH. Esta ordem pode ser expressa como: \verb|Order(10, ETH, 3000, USD, False)|.
+	\item Vender  ETH a 300 USD/ETH para obter 3000 USD. Esta ordem pode ser expressa como: \verb|Order(10, ETH, 3000, USD, True)|.
+	\item Comprar 10 ETH a 300 USD/ETH. Esta ordem pode ser expressa como: \verb|Order(3000, USD, 10, ETH, True)|.
+	\item Gastar 3000 USD para comprar o máximo de ETH assim que possível a 300 USD/ETH. Esta ordem pode ser expressa como: \verb|Order(3000, USD, 10, ETH, False)|.
 \end{enumerate}
 
+%\subsection{Ring Verification\label{sec:ring_verification}}
+\subsection{Verificação\label{sec:ring_verification}}
 
+%The Loopring Smart Contracts do not perform exchange rate or amount calculations, but must receive and verify what the ring-miners supply for these values. These calculations are done by ring-miners for two main reasons: (1) the programming language for smart contracts, such as solidity\cite{dannen2017introducing} on Ethereum, does not have support for floating point math, especially $pow(x, 1/n)$ (calculating the n-th root of a floating point number), and (2) it is desirable for the computation to be made off-chain to reduce blockchain computation and cost.
 
-\subsection{Ring Verification\label{sec:ring_verification}}
+Os \textit{smart-contracts} do Loopring não efetuam taxas de troca ou cálculos sobre montantes, mas devem receber e verificar o que é que os \textit{ring-miners} providenciam sobre esse parâmetros. Estes cálculos estão encarregues aos \textit{ring-miners} por dois motivos:
+\begin{enumerate}
+  \item (1) A linguagem de programação utilizada para desenvolver o contrato, como Solidity\cite{dannen2017introducing} na plataforma Ethereum, não suporta \textit{floating-point}, como $pow(x, 1/n)$ (o cálculo da raiz(n) de um número \textit{floating-point}).
+  \item (2) É importante que as computações sejam efetuadas \textit{off-chain} para reduzir a carga de trabalho da \textit{blockchain} e, respetivamente, o seu custo.
 
-The Loopring Smart Contracts do not perform exchange rate or amount calculations, but must receive and verify what the ring-miners supply for these values. These calculations are done by ring-miners for two main reasons: (1) the programming language for smart contracts, such as solidity\cite{dannen2017introducing} on Ethereum, does not have support for floating point math, especially $pow(x, 1/n)$ (calculating the n-th root of a floating point number), and (2) it is desirable for the computation to be made off-chain to reduce blockchain computation and cost.
+% \subsubsection{Sub-Ring Checking\label{sec:sub_ring_check}}
+\subsubsection{Verificação \textit{Sub-Ring}\label{sec:sub_ring_check}}
 
+% This step prevents arbitrageurs from unfairly realizing all the margin in an order-ring by implementing new orders within it. Essentially, once a valid order-ring is found by a ring-miner, it could be tempting to add other orders to the order-ring to fully absorb the users' margin (rate discounts). As illustrated by figure \ref{fig:subring} below, carefully calculated $x1$, $y1$, $x2$ and $y2$ will make the product of all orders' rate be exactly 1 so there will be no rate discount. 
 
-\subsubsection{Sub-Ring Checking\label{sec:sub_ring_check}}
-This step prevents arbitrageurs from unfairly realizing all the margin in an order-ring by implementing new orders within it. Essentially, once a valid order-ring is found by a ring-miner, it could be tempting to add other orders to the order-ring to fully absorb the users' margin (rate discounts). As illustrated by figure \ref{fig:subring} below, carefully calculated $x1$, $y1$, $x2$ and $y2$ will make the product of all orders' rate be exactly 1 so there will be no rate discount. 
+Esta fase previne arbitrariedades na prática de margens injustas de um \textit{order-ring} ao implementar novas ordens dentro do mesmo. Quando um \textit{order-ring} válido é encontrado por um \textit{ring-miner} pode ser tentador adicionar outras ordens a esse \textit{order-ring} para absorver a margem dos utilizadores (). Conforme ilustrado na figura \ref{fig:subring} em baixo, $x1$, $y1$, $x2$ e $y2$ são calculados minuciosamente para fazer com que o produto das taxas de todas as ordens seja exatamente igual a 1, não havendo qualquer desconto nem benefício para o utilizador.
 
 \begin{center}
 \begin{figurehere}
@@ -811,47 +842,68 @@ This step prevents arbitrageurs from unfairly realizing all the margin in an ord
 \end{figurehere}
 \end{center}
 
-This is zero-risk, zero-value add to the network, and is considered unfair conduct by the ring-miner. To prevent this, Loopring requires that a valid loop cannot contain any sub-rings. To check this, the LPSC ensures a token cannot be in a buy or sell position twice. In the above diagram, we can see that token \verb|A| is a sell token twice and a buy token twice, which would be disallowed. 
+%This is zero-risk, zero-value add to the network, and is considered unfair conduct by the ring-miner. To prevent this, Loopring requiresthat a valid loop cannot contain any sub-rings. To check this, the LPSC ensures a token cannot be in a buy or sell position twice. In the above diagram, we can see that token \verb|A| is a sell token twice and a buy token twice, which would be disallowed. 
 
+Isto não introduz risco mas não adiciona valor à rede e é considerada uma prática injusta pelo \textit{ring-miner}. Para prevenir esta situação o Loopring requer a inexistência de \textit{sub-rings} dentro de um \textit{order-ring} (loop); e para garantir este requerimento o LPSC assegura que uma \textit{token} não pode estar, em simultâneo, numa posição de compra e venda. No diagrama acima é possível verificar que a \textit{token} \verb|B| está duas vezes numa posição de venda e duas vezes numa posição de compra, o que não é permitido.
 
-\subsubsection{Fill Rate Checking\label{sec:fill_rate_check}}
+%\subsubsection{Fill Rate Checking\label{sec:fill_rate_check}}
+\subsection{Verificação da Taxa de Preenchimento}
 
+%The exchange rate calculations in the order-ring are made by ring-miners for reasons stated above. It is the LPSC that must verify they're correct. First, it verifies that the buy rate the ring-miner can execute for each order is equal to or less than the original buy rate set by the user. This ensures the user gets at least the exchange rate they asked for or better on the transaction. Once the exchange rates are confirmed, the LPSC ensures that each order in the order-ring shares the same rate discount. For instance, if the discounted rate is $\gamma$, then the price for each order will be:
 
-The exchange rate calculations in the order-ring are made by ring-miners for reasons stated above. It is the LPSC that must verify they're correct. First, it verifies that the buy rate the ring-miner can execute for each order is equal to or less than the original buy rate set by the user. This ensures the user gets at least the exchange rate they asked for or better on the transaction. Once the exchange rates are confirmed, the LPSC ensures that each order in the order-ring shares the same rate discount. For instance, if the discounted rate is $\gamma$, then the price for each order will be:
+Os cálculos das taxas de câmbio dentro de um \textit{order-ring} são efetuadas pelos \textit{ring-miners} pelas razões mencionadas em cima. Cabe ao LPSC verificar se os cálculos estão corretos. Primeiro é verificado se a taxa de compra que um \textit{ring-miner} pode executar por cada ordem é igual ou menor que a taxa original definida pelo utilizador. Isto garante ao utilizador uma taxa de câmbio melhor ou igual à inicialmente definida para essa transação. Após confirmação, o LPSC garante que qualquer ordem dentro do \textit{order-ring} partilha a mesma taxa de desconto. Por exemplo, se a taxa descontada é $\gamma$, então o preço, por cada ordem, vai ser:
 
-$r_{0\rightarrow 1} \cdot (1-\gamma)$, $r_{1\rightarrow 2} \cdot (1-\gamma)$, $r_{2 \rightarrow 0} \cdot (1-\gamma)$, and satisfy: 
+$r_{0\rightarrow 1} \cdot (1-\gamma)$, $r_{1\rightarrow 2} \cdot (1-\gamma)$, $r_{2 \rightarrow 0} \cdot (1-\gamma)$, e satisfaz: 
 \begin{equation}
 r_{0\rightarrow 1} \cdot (1-\gamma)\cdot r_{1\rightarrow 2} \cdot (1-\gamma) \cdot r_{2 \rightarrow 0} \cdot (1-\gamma) = 1
 \end{equation}
-hence: 
+Daqui advém: 
 \begin{equation}
 \gamma = 1- \frac{1}{\sqrt[3]{r_{0\rightarrow 1} \cdot r_{1\rightarrow 2} \cdot r_{2\rightarrow 0}}}\text{.}
 \end{equation}
-If the transaction crosses $n$ orders, the \texttt{discount} is: 
+Se a transação agrega $n$ ordens, o \texttt{desconto} será: 
 \begin{equation}
 \gamma = 1- \frac{1}{\sqrt[n]{\prod_{i=0}^{n-1} r^i}} \text{,}
 \end{equation}
 
-where $r^i$ is the order turnover rate of $i$-th order. Obviously, only when the discount rate is $\gamma \ge 0$, can these orders be filled; and the $i$-th order ($O^i$)'s actual exchange rate is $\hat{r^i} = r^i \cdot (1-\gamma)$, $\hat{r^i}\le r^i$.
+%where $r^i$ is the order turnover rate of $i$-th order. Obviously, only when the discount rate is $\gamma \ge 0$, can these orders be filled; and the $i$-th order ($O^i$)'s actual exchange rate is $\hat{r^i} = r^i \cdot (1-\gamma)$, $\hat{r^i}\le r^i$.
 
-Recall our prior example where Alice has 15 token \verb|A| and wants 4 token \verb|B| for them, Bob has 10 token \verb|B| and wants 30 token \verb|A| for them. If token \verb|A| is the reference, then Alice is buying token \verb|B| for $\frac{15}{4}$ = 3.75\verb|A|, while Bob is selling token \verb|B| for $\frac{30}{10}$ = 3.00\verb|A|. To calculate the discount: $\frac{150}{120}$ = 1.25 thus $\frac{1}{1.25}$ = 0.8 = $(1 −- \gamma)^2$. Thus the exchange rate that renders the trade equitable for both parties is $\sqrt{0.8}$ $\cdot$ 3.75 $\approx$ 3.3541 token \verb|A| per token \verb|B|.
+onde $r^i$ é a taxa de retorno associado à $i$ ordem. Obviamente, só quando a taxa de retorno é $\gamma \ge 0$ é que estas ordens podem ser preenchidas; e o ($O^i$) da taxa de câmbio da $i$ ordem é $\hat{r^i} = r^i \cdot (1-\gamma)$, $\hat{r^i}\le r^i$.
 
-Bob gives 4 token \verb|B| and receives 13.4164 token \verb|A|, more than the 12 he was expecting for those 4 tokens. Alice receives 4 token \verb|B| as intended but gives only 13.4164 token \verb|A| in exchange, less than the 15 she was willing to give for those 4 tokens.
-Note, a portion of this margin will go towards paying fees to incentivize miners (and wallets). (See section \ref{sec:fee_model}).
+%Recall our prior example where Alice has 15 token \verb|A| and wants 4 token \verb|B| for them, Bob has 10 token \verb|B| and wants 30 token \verb|A| for them. If token \verb|A| is the reference, then Alice is buying token \verb|B| for $\frac{15}{4}$ = 3.75\verb|A|, while Bob is selling token \verb|B| for $\frac{30}{10}$ = 3.00\verb|A|. To calculate the discount: $\frac{150}{120}$ = 1.25 thus $\frac{1}{1.25}$ = 0.8 = $(1 −- \gamma)^2$. Thus the exchange rate that renders the trade equitable for both parties is $\sqrt{0.8}$ $\cdot$ 3.75 $\approx$ 3.3541 token \verb|A| per token \verb|B|.
 
+De relembrar no exemplo apresentado anteriormente onde a Alice tem 15 \textit{token} \verb|A| e quer 4 \textit{token} \verb|B| pelas 15 que detém, o Bob tem 10 \textit{token} \verb|B| e quer 30 \textit{token} \verb|A| pelas 10 que detém. Se a \textit{tokens} \verb|A| for considerada como areferência então a Alice vai comprar \textit{tokens} \verb|B| por $\frac{15}{4}$ = 3.75\verb|A|, enquanto que o Bob vai vender \textit{token} \verb|B| for $\frac{30}{10}$ = 3.00\verb|A|. Para calcular o desconto: $\frac{150}{120}$ = 1.25, portanto, $\frac{1}{1.25}$ = 0.8 = $(1 −- \gamma)^2$. Desta forma, a taxa de câmbio que processa a transação de ambos os intervenientes é $\sqrt{0.8}$ $\cdot$ 3.75 $\approx$ 3.3541 token \verb|A| pela token \verb|B|.
 
-\subsubsection{Fill Tracking \& Cancellation}
+%Bob gives 4 token \verb|B| and receives 13.4164 token \verb|A|, more than the 12 he was expecting for those 4 tokens. Alice receives 4 token \verb|B| as intended but gives only 13.4164 token \verb|A| in exchange, less than the 15 she was willing to give for those 4 tokens.
 
-A user can partially or fully cancel an order by sending a special transaction to the LPSC, containing the details about the order and the amounts to cancel. The LPSC takes that into account, stores the amounts to cancel, and emits an \verb|OrderCancelled| event to the network. The LPSC keeps track of filled and cancelled amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and \verb|OrderCancelled| / \verb|OrderFilled| events are emitted when it changes. Tracking these values is critical for the LPSC during the order-ring settlement step.
+Bob dá 4 \textit{token} \verb|A| e recebe 13.4164 \textit{token}\verb|A|, mais do que as 12 de que estava à espera. A Alica recebe 4 \textit{token} \verb|B| mas apenas dá em troca 3.4164 \textit{token} \verb|A|, menos que as 15 que estava disposta a dar.
 
-LPSC also supports cancelling all orders for any trading pair with the \verb|OrdersCancelled| event  and cancelling all orders for an address with the \verb|AllOrdersCancelled| event.
+%Note, a portion of this margin will go towards paying fees to incentivize miners (and wallets). (See section \ref{sec:fee_model}).
 
+Uma porção desta margem vai diretamente para o pagamento das taxas para incentivar os \textit{ring-miners} (e \textit{wallets}). Ver secção 
+\ref{sec:fee_model}).
 
-\subsubsection{Order Scaling\label{sec:order_scaling}}
-Orders are scaled according to the history of filled and cancelled amounts and the current balance of the senders' accounts. The process finds the order with the smallest amount to be filled according to the above characteristics and uses it as a reference for scaling all transactions in the order-ring.
+%\subsubsection{Fill Tracking \& Cancellation}
+\subsubsection{Rastreamento \& Cancelamento}
 
+%A user can partially or fully cancel an order by sending a special transaction to the LPSC, containing the details about the order and the amounts to cancel. The LPSC takes that into account, stores the amounts to cancel, and emits an \verb|OrderCancelled| event to the network. The LPSC keeps track of filled and cancelled amounts by storing their values using the order's hash as an identifier. This data is publicly accessible and \verb|OrderCancelled| / \verb|OrderFilled| events are emitted when it changes. Tracking these values is critical for the LPSC during the order-ring settlement step.
 
-Finding the lowest value order can help to figure out the fill volume for each order. For instance, if the $i$-th order is the lowest value order, then the number of tokens sold from each order $\hat{s}$ and number of tokens purchased $\hat{b}$ from each order can be calculated as:
+Um utilizador pode cancelar uma ordem total ou parcialmente ao enviar uma transação especial para o LPSC que contém detalhes sobre a mesma e o montante a cancelar. O LPSC considera essa transação especial, guarda o montante a cancelar e emite um evento do tipo \verb|OrderCancelled| para a rede. O LPSC mantém um registo de montantes cancelados e preenchidos ao guardar os respetivos identificadores obtidos através da \textit{hash} da ordem. Esta informação pode ser acedida e os eventos \verb|OrderCancelled| / \verb|OrderFilled| são emitidos quando essa muda. Durante a fase de acordo do \textit{order-ring} o acesso a estes valores é um processo crítico para o LPSC.
+
+%LPSC also supports cancelling all orders for any trading pair with the \verb|OrdersCancelled| event  and cancelling all orders for an address with the \verb|AllOrdersCancelled| event.
+
+O LPSC também suporta o cancelamento de ordens para qualquer par de troca com o evento \verb|OrdersCancelled| e o cancelamento de todas as ordens de um endereço com o evento \verb|AllOrdersCancelled|.
+
+%\subsubsection{Order Scaling\label{sec:order_scaling}}
+\subsubsection{Escalabilidade de Ordens\label{sec:order_scaling}}
+
+%Orders are scaled according to the history of filled and cancelled amounts and the current balance of the senders' accounts. The process finds the order with the smallest amount to be filled according to the above characteristics and uses it as a reference for scaling all transactions in the order-ring.
+
+As ordens são escaláveis de acordo com o histórico de montantes preenchidos e cancelados e o balanço na conta do emissor. O processo encontra a ordem com o montante mais pequeno para ser preenchido de acordo com as características mencionadas em cima. Esse montante é usado como referência para escalar todas as transações que pertencem ao \textit{order-ring}.
+
+%Finding the lowest value order can help to figure out the fill volume for each order. For instance, if the $i$-th order is the lowest value order, then the number of tokens sold from each order $\hat{s}$ and number of tokens purchased $\hat{b}$ from each order can be calculated as:
+
+Encontrar a ordem com o valor mais baixo pode ajudar a encontrar o volume necessário para prencher cada uma das ordens de um \textit{order-ring}. Se a $i$ ordem tem o valor mais baixo então o número de \textit{tokens} comprado $\hat{s}$  por cada ordem pode ser calculado como:
 
 \[
 \begin{split}
@@ -862,15 +914,23 @@ Finding the lowest value order can help to figure out the fill volume for each o
 %\text{.}
 \end{split}
 \]
-where $\overline{s}_i$ is the the balance left after orders are partially filled.
+onde $\overline{s}_i$ é o balanço resultante depois das ordens estarem parcialmente preenchidas.
 
-During implementation we can safely assume any order in the order-ring to have the lowest value, then iterate through the order-ring at most twice to calculate each order's fill volume. 
+%During implementation we can safely assume any order in the order-ring to have the lowest value, then iterate through the order-ring at most twice to calculate each order's fill volume. 
 
-Example: If the smallest amount to be filled compared to the original order is 5\%, all the transactions in the order-ring are scaled down to 5\%. Once the transactions are completed, the order that was considered to have the smallest amount remaining to be filled should be completely filled.
+Durante a implementação é possível assumir qualquer odem do \textit{order-ring} como a ordem com menor valor, e iterar pelo \textit{order-ring}, por duas vezes, no máximo, para calcular o volume necessário para preencher cada ordem.
 
-\subsection{Ring Settlement\label{sec:settlement}}
+%Example: If the smallest amount to be filled compared to the original order is 5\%, all the transactions in the order-ring are scaled down to 5\%. Once the transactions are completed, the order that was considered to have the smallest amount remaining to be filled should be completely filled.
 
-If the order-ring fulfills all the previous checks, the order-ring can be closed, and transactions can be made. This means that all $n$ orders form a closed order-ring, connected as in figure 4:
+Exemplo: Se o montante mais pequeno a ser preenchido for the 5\% quando comparado com o valor original da ordem, então, todas as transações do \textit{order-ring} são reduzidas a 5\%. Imediatamente após a conclusão das transações, a ordem que foi considerada como a ordem com o montante restante mais baixo a ser preenchido deve  ser completamente preenchida.
+
+%\subsection{Ring Settlement\label{sec:settlement}}
+
+\subsection{Concordância de um \textit{Order-Ring}}
+
+%If the order-ring fulfills all the previous checks, the order-ring can be closed, and transactions can be made. This means that all $n$ orders form a closed order-ring, connected as in figure 4:
+
+%Se um \textit{order-ring} preencher todos os requisitos pode ser fechado e as transações podem ser efetuadas. Isto significa que todas as $n$ ordens formam um \textit{order-ring} fechado. 
 
 \begin{center}
 \begin{figurehere}
@@ -911,21 +971,32 @@ circle/.style={
 \end{figurehere}
 \end{center}
 
-To make the transactions, the LPSC uses the \verb|TokenTransferDelegate| smart contract. The introduction of such a delegate makes upgrading the protocol smart contract easier as all orders only need to authorize this delegate instead of different versions of the protocol.
+%To make the transactions, the LPSC uses the \verb|TokenTransferDelegate| smart contract. The introduction of such a delegate makes upgrading the protocol smart contract easier as all orders only need to authorize this delegate instead of different versions of the protocol.
 
-For each order in the order-ring, a payment of \verb|tokenS| is made to the next or the previous order depending on the implementation. Then the ring-miner's fee is paid depending on the fee model chosen by the ring-miner. Finally, once all the transactions are made, a \verb|RingMined| event is emitted.
+Para efetuar as transações, o LPSC recorre a um \textit{smart-contract} que introduz um delegado \verb|TokenTransferDelegate| capaz de tornar mais fácil a atualização do protocolo do \textit{smart-contract} na medida em que pode ser autorizado por todas as ordens, ao contrário destas necessitarem de atualizar diferentes protocolos.
 
-\subsubsection{Emitted Events\label{sec:events}}
+%For each order in the order-ring, a payment of \verb|tokenS| is made to the next or the previous order depending on the implementation. Then the ring-miner's fee is paid depending on the fee model chosen by the ring-miner. Finally, once all the transactions are made, a \verb|RingMined| event is emitted.
 
-The protocol emits events that allow relays, order browsers, and other actors to receive order book updates as efficiently as possible. The emitted events are:
+Por cada ordem no \textit{order-ring}, um pagamento de \verb|tokenS| deve ser efetuado à ordem anterior ou posterior, dependendo da implementação.
+A taxa do \textit{ring-miner} é paga dependendo do modelo que foi escolhido pelo mesmo. Finalmente, assim que todas as transações fiquem concluidas, o evento 
+\verb|RingMined| é emitido.
+
+% \subsubsection{Emitted Events\label{sec:events}}
+\subsubsection{Eventos Emitidos\label{sec:events}}
+
+%The protocol emits events that allow relays, order browsers, and other actors to receive order book updates as efficiently as possible. The emitted events are:
+
+O Protocolo emite eventos que permite a todos os retransmissores/nós, navegadores/consultores de ordens e outros actores que operam na rede receber um registo de ordens atualizado de uma forma eficiente. Os eventos que formam o sistema são:
 
 \begin{itemize}
-	\item \textbf{OrderCancelled}: A specific order has been cancelled.
-	\item \textbf{OrdersCancelled}: All orders of a trading pair from an owning address have been cancelled.
-	\item \textbf{AllOrdersCancelled}: All orders of all trading pairs from an owning address have been cancelled.
-	\item \textbf{RingMined}: An order-ring has been settled successfully. This event contains data related to each inner-ring token transfer.
+	\item \textbf{OrderCancelled}: A ordem é cancelada.
+	\item \textbf{OrdersCancelled}: Todas as ordens de um par de troca específico e pertencentes ao endereço detentor são canceladas.
+	\item \textbf{AllOrdersCancelled}: Todas as ordens de todos os pares de troca e pertencentes ao endereço detentor são canceladas.
+	\item \textbf{RingMined}: Um \textit{order-ring} foi estabelecido com sucesso. Este evento contém informação relativa a cada 
+  transferência de \textit{tokens} do \textit{inner-ring}.
 \end{itemize}
 
+%%% End 7 %%%
 
 \section{LRx Token\label{sec:token}}
 LRx is our generalized token notation. LRC is the Loopring token on Ethereum, LRQ on Qtum, and LRN on NEO, etc. Other LRx types will be introduced in the future as Loopring is deployed on other public blockchains.
